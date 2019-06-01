@@ -2,7 +2,7 @@ state = 0b0000  # 初期状態
 
 sleep = 0b0001  # 眠り
 poison = 0b0010  # 毒
-palarysis = 0b0100  # 麻痺
+paralysis = 0b0100  # 麻痺
 excitation = 0b1000  # 励起
 
 
