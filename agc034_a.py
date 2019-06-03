@@ -1,30 +1,18 @@
 N, A, B, C, D = map(int, input().split())
 S = input()
 
-"""
-7 1 3 7 6
-.#..#..
-A#B.#CD
-"""
+A -= 1
+B -= 1
+C -= 1
+D -= 1
 
-if C < D:
-    cnt = 0
-    for i in range(len(S)):
-        if i >= len(S) - 1:
-            break
-        if S[i] == "#" and S[i+1] == "#":
-            cnt += 1
-    if cnt >= 1:
-        print('No')
-    else:
-        print('Yes')
-
-if C > D:
-    cnt = 0
-    for i in range(B, D):
-        if S[i-1] == '.' and S[i] == '.' and S[i+1] == '.':
-            cnt += 1
-    if cnt >= 1:
+if '##' in S[A:C+1] or '##' in S[B:D+1]:
+    print('No')
+else:
+    if C < D:
         print('Yes')
     else:
-        print('No')
+        if '...' in S[B-1:D+2]:
+            print('Yes')
+        else:
+            print('No')
