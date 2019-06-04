@@ -38,9 +38,9 @@
 　  最大化 f
 　  条件　0 <= xij <= uij  ※ (i,j) ∈ E
 
-    Σ xkj - Σ xik = 0    k はstart, target以外の点
-    Σ xsj - Σ xis = f    s =start
-    Σ xtj - Σ xit = -f   t =target
+    Σ xkj - Σ xik = 0    k はs, t以外の点
+    Σ xsj - Σ xis = f    s
+    Σ xtj - Σ xit = -f   t
 
     この問題の実行可能解 xij -- 実行可能フロー
     総流量が最大の実行可能フロー -- 最大フロー
