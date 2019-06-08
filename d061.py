@@ -12,6 +12,7 @@ def Bellmanford(node, edges, source):
             # リストを更新する
             if d[start] != INF and d[start] + cost < d[goal]:
                 d[goal] = d[start] + cost
+                # 閉路を検出したらinfを返す
                 if i == node-1 and goal == node-1:
                     return 'inf'
     return -d[node-1]
@@ -28,10 +29,3 @@ for i in range(M):
 
 ans = Bellmanford(N, Edges, 0)
 print(ans)
-
-"""
-3 3
-1 2 4
-2 3 3
-1 3 5
-"""
